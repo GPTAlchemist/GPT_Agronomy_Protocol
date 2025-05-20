@@ -6,24 +6,26 @@ A structure-first meta-prompting tool that transforms raw user intent into schem
 
 ### 🎯 What This Tool Does
 
-Instruction Alchemist helps you create reusable, structured instruction sets for GPT-based agents. These instruction sets define:
+Instruction Alchemist is a tool for designing instruction sets, not prompts. These structured content blocks are embedded into GPT agents as system messages, and define:
 
-* ✅ The agent’s persona and tone
-* ✅ Behavior rules and boundaries
-* ✅ Example input/output exchanges
+* ✅ The assistant’s role and tone
+* ✅ Behavioral constraints and communication rules
+* ✅ Input/output formats
+* ✅ Example interactions to reinforce expected responses
 
-Unlike prompt templates, these are system message-ready and built for operational integration, not ad hoc use.
+Unlike one-off prompt templates, these instruction sets are composable, reusable, and designed for operational use.
 
 ---
 
 ### ⚠️ Not a Prompt Engine
 
-This repo does **not**:
+This tool is **not** a prompt execution engine. It does **not**:
 
 * Run GPT completions
-* Accept dynamic schema uploads
+* Accept user-uploaded schemas
+* Dynamically load or validate multiple schema files
 
-The `gpt_instruction_schema.yaml` is a fixed internal reference to ensure all outputs follow a known, enforceable structure.
+The `gpt_instruction_schema.yaml` is internal scaffolding for consistency. Users interact with a guided UI—not raw schema files.
 
 ---
 
@@ -78,6 +80,14 @@ Teams using Instruction Alchemist report:
 * Reduced behavior drift across agents
 * Easier compliance and audit workflows
 * Cleaner handoffs across QA, Ops, and Engineering
+
+---
+
+### 🧠 Ideal For
+
+* Agent designers who need reusable, composable GPT instructions
+* Teams building GPT logic layers or instruction libraries
+* Products that modularize AI behavior via system message assets
 
 ---
 
