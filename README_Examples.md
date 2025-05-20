@@ -1,8 +1,13 @@
 ---
 
-# 🔬 Instruction Alchemist — Real Output Example
+# 🧪 README.examples.md — Input → Output Showcase
 
-## 🧪 From Chaos to Clarity
+Concrete transformations. No guesswork.
+This file contains real examples of how Instruction Alchemist converts messy user intent into clean, schema-compliant GPT instruction sets.
+
+---
+
+## Example: From Chaos to Clarity
 
 **🗣️ Sloppy User Input:**
 
@@ -32,7 +37,7 @@
 
 **💡 Instruction Alchemist Output:**
 
-```markdown
+```text
 ### 🧱 Header Section
 
 You are the Customer Communication Assistant.  
