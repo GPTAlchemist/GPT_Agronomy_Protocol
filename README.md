@@ -1,67 +1,86 @@
----
-
 # 🧙‍♂️ Instruction Alchemist
 
-A forge for structure-first prompt engineering.
-Instruction Alchemist transforms raw user intent into schema-compliant instruction sets for GPTs. Designed for scale, auditability, and internal tooling, it's your go-to meta-prompting tool for building AI agents that don’t just work once—they work every time.
+A structure-first meta-prompting tool that transforms raw user intent into schema-compliant instruction sets for GPT-based agents. Built for teams that value consistency, auditability, and scale.
 
 ---
 
-## ✨ Use Case Summary
+### 🎯 What This Tool Does
 
-Custom GPTs often start strong but spiral into chaos. Instruction Alchemist solves this by translating vague user requests into precise, enforceable instruction sets that teams can trust, reuse, and scale. Whether you're in QA, Ops, or just tired of duct-taping prompts together, this tool lays the foundation for resilient AI behaviors.
+Instruction Alchemist helps you create reusable, structured instruction sets for GPT-based agents. These instruction sets define:
 
----
+* ✅ The agent’s persona and tone
+* ✅ Behavior rules and boundaries
+* ✅ Example input/output exchanges
 
-## ⚡ Problem Statement
-
-Most GPT builds are one-offs: inconsistent, hard to maintain, and even harder to audit. Without structure, teams rely on tribal knowledge and guesswork to enforce tone, roles, or formatting rules. This bottlenecks scale and introduces risk.
-
----
-
-## 🔧 Solution Overview
-
-Instruction Alchemist applies a strict, schema-driven process to prompt design. It parses intent, requests clarification where logic gaps exist, and produces compliant outputs using a predictable 4-part structure:
-
-1. **Header Section**
-2. **Behavior Blocks**
-3. **Clarification Logic**
-4. **Explicit Formatting Requirements**
+Unlike prompt templates, these are system message-ready and built for operational integration, not ad hoc use.
 
 ---
 
-## 📈 Key Features
+### ⚠️ Not a Prompt Engine
 
-* **Structured Parsing** — Turns unstructured input into logic-aligned behaviors.
-* **Gap-Filling Dialogue** — Asks smart questions when required data is missing.
-* **Behavior Blocks** — Encodes assistant logic in natural, interpretable language.
-* **Role & Tone Fidelity** — Preserves assistant personality and operational context.
-* **Formatting Enforcement** — Every output matches your internal schema—no exceptions.
+This repo does **not**:
 
----
+* Run GPT completions
+* Accept dynamic schema uploads
 
-## ⚙️ Technical Highlights
-
-* Enforces compliance with `gpt_instruction_schema.yaml`
-* Halts generation if required fields are missing or unclear
-* Embeds QA logic within prompts for testability
-* Outputs Markdown-fenced, schema-validated instruction sets only
+The `gpt_instruction_schema.yaml` is a fixed internal reference to ensure all outputs follow a known, enforceable structure.
 
 ---
 
-## ✅ Results
+### ⚡ Problem Statement
+
+Most GPT implementations are brittle. They're improvised, hard to audit, and impossible to scale. Tone, role, and logic drift across builds, especially when teams rely on gut feel over formal structure.
+
+---
+
+### 🔧 Solution Overview
+
+Instruction Alchemist applies a schema-first design process to system message generation. It:
+
+1. Parses intent and flags ambiguity
+2. Enforces output structure via schema
+3. Halts or queries when logic gaps exist
+4. Outputs clean, audit-ready Markdown
+
+All using a predictable four-part layout:
+
+* **Header Section**
+* **Behavior Blocks**
+* **Clarification Logic**
+* **Explicit Formatting Requirements**
+
+---
+
+### 📈 Key Features
+
+* **Structured Parsing** — Turns loose input into role-aligned instructions
+* **Gap-Filling Dialogue** — Pauses to ask smart questions when fields are missing
+* **Behavior Blocks** — Encodes assistant logic in interpretable English
+* **Role & Tone Fidelity** — Locks in persona and operational context
+* **Strict Formatting** — Outputs fenced Markdown matching internal schema
+
+---
+
+### ⚙️ Technical Highlights
+
+* Validates all fields against `gpt_instruction_schema.yaml`
+* Halts generation if schema rules aren’t met
+* Embeds QA checkpoints into prompt structure
+* Outputs are production-ready system messages, not chat hacks
+
+---
+
+### ✅ Results
 
 Teams using Instruction Alchemist report:
 
-* 70% faster prompt creation workflows
-* Consistent behavior across assistants
-* Easier audit trails for regulated environments
-* Improved cross-functional handoffs between Ops, QA, and Engineering
+* 70% faster prompt creation
+* Reduced behavior drift across agents
+* Easier compliance and audit workflows
+* Cleaner handoffs across QA, Ops, and Engineering
 
 ---
 
-## 📧 Want In?
+### 📧 Ready to Scale?
 
-If your team is ready to stop winging it and start building GPTs that scale, Instruction Alchemist is your blueprint. Structured, resilient, and ready for production.
-
----
+Stop duct-taping prompts. Start building structured, resilient GPTs that don’t just work once—they work every time.
