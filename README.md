@@ -1,87 +1,144 @@
 # GPT Agronomy Protocol
 
-**Two-model system for cultivating high-value GPTs — schema-grown, fire-tested.**
+**A schema-enforced, adversarial prompt engineering protocol for high-resilience GPT builds.**
 
 ---
 
-## 🌾 What Is It?
+## 🧨 Problem
 
-The GPT Agronomy Protocol is a prompt farming methodology.  
-It pairs two specialized instruction engines:
-
-- **Instruction Alchemist** — schema enforcer and DNA extractor  
-- **Instruction Reaper** — brutalist validator and collapse tester  
-
-One builds. One breaks. Together, they breed durable GPTs.
+Flimsy GPT instruction sets buckle under pressure: vague tone, soft constraints, weak structure. Most survive a demo, but collapse in production.
 
 ---
 
-## 🧬 Why It Exists
+## 🌾 What It Is
 
-Most GPTs are born soft — vague roles, sloppy formatting, weak edge-case handling.  
-This system creates **resilient, high-value instruction sets** that:
+A two-phase protocol for cultivating GPTs that survive real-world conditions. Pairs two distinct engines:
 
-- Match exact schema standards  
-- Survive adversarial testing  
-- Scale across use cases
+* **Instruction Alchemist** – schema enforcer and role logic parser
+* **Instruction Reaper** – adversarial validator and rewrite drill sergeant
 
----
-
-## 🛠 How It Works
-
-### Step 1: Alchemist Phase
-
-Run your raw prompt idea through **Instruction Alchemist**:
-- Enforces the `gpt_instruction_schema.yaml`
-- Rejects malformed or ambiguous input
-- Guides you into compliant structure via Clarification Logic
-- Outputs a clean, production-grade instruction set
-
-**No schema = no prompt.**  
-Alchemist doesn’t guess. It clarifies or aborts.
+One builds. One breaks. Together, they force clarity, consistency, and operational durability.
 
 ---
 
-### Step 2: Reaper Phase
+## 🔧 How It Works
 
-Take the schema-valid instruction set and feed it to **Instruction Reaper**:
-- Diagnoses structural or behavioral weakness
-- Mocks and patches flaws
-- Runs adversarial collapse tests (recursive traps, contradiction loops, role invasions)
-- Delivers judgment: pass, fail, or rebuild
+**1. Alchemist Phase**
 
-**If the Reaper approves, you’ve got a battle-ready GPT.**
+* Takes raw user intent
+* Enforces the `gpt_instruction_schema.yaml`
+* Flags ambiguities, asks clarification questions
+* Outputs schema-valid instruction sets with:
 
----
+  * Header section
+  * Behavior blocks
+  * Clarification logic
+  * Formatting rules
 
-## 🔁 The Cycle
+**2. Reaper Phase**
 
-1. Draft with Alchemist  
-2. Stress with Reaper  
-3. Revise, rerun, harden  
-4. Deploy
+* Accepts only schema-compliant input
+* Mocks structural flaws with snark and precision
+* Rewrites broken logic without permission
+* Runs breach simulations:
 
-This isn’t one-shot prompt design. It’s **evolution through schema and fire**.
+  * Contradiction loops
+  * Recursive traps
+  * Role invasions
+* Returns verdict: pass, fail, or rebuild
 
----
+**3. Repeat Until Battle-Ready**
 
-## 💡 Tips for Use
-
-- Treat Alchemist like a compiler — precision in, precision out  
-- Treat Reaper like QA with a grudge — don’t argue, improve  
-- Iterate fast: Alchemist → Reaper → back again  
-- Never skip Reaper. “Looks good” means nothing until it breaks
-
----
-
-## 🌱 Results
-
-What you get:
-
-- Schema-pure instruction sets  
-- Prompt logic hardened against edge cases  
-- A GPT that survives in the wild — not just the demo
+* Cycle: Alchemist → Reaper → Alchemist
+* Revise and rerun until collapse testing is clean
 
 ---
 
-**You’re not writing prompts. You’re farming GPTs for war.**
+## 📉 Diagram
+
+```mermaid
+graph TD
+    A[Raw Prompt Idea] --> B[Instruction Alchemist]
+    B --> C[Schema-Valid Instruction Set]
+    C --> D[Instruction Reaper]
+    D -->|Pass| E[Deploy GPT]
+    D -->|Fail| B
+    D -->|Rebuild| B
+```
+
+---
+
+## 🛠 Key Features
+
+### Instruction Alchemist
+
+* Schema-first design enforcement
+* Clarification prompts for missing logic
+* Predictable, audit-friendly output format
+
+### Instruction Reaper
+
+* Roast-first structural diagnosis
+* Auto-rewrites malformed sets
+* Stress-tests logic under hostile conditions
+* Snarky, diagnostic tone (no praise, no fluff)
+
+---
+
+## ⚙️ Quickstart: Running a Full Cycle
+
+1. Draft raw intent or behavior goals
+2. Feed into **Instruction Alchemist**
+3. Receive schema-compliant instruction set
+4. Pass to **Instruction Reaper**
+5. Review breakdowns, contradictions, or rewrites
+6. Patch and re-enter Alchemist if needed
+7. Repeat until Reaper approves
+8. Deploy hardened GPT
+
+---
+
+## 📦 Example Output
+
+### ✅ Schema-Built Prompt (Alchemist)
+
+```markdown
+## Role
+You are a tactician AI for real-time operations in crisis response.
+
+## Tone
+Decisive, alert, no unnecessary elaboration.
+
+## Behavior Blocks
+- Interpret short-form field reports with high compression
+- Prioritize threats using embedded logic tree
+- Reject non-actionable input
+
+## Clarification Logic
+- If location is ambiguous, request GPS
+- If multiple incident types, ask for primary
+```
+
+### ❌ Reaper Verdict (Before Fix)
+
+> "This instruction set reads like it was written by a committee afraid of verbs. Your tone is 'alert' but your logic sleeps in. Rewrite the behavior block like it means something."
+
+---
+
+## 👥 Who It's For
+
+* GPT developers needing durable logic layers
+* AI ops teams managing internal GPT workflows
+* Toolsmiths building composable instruction libraries
+
+---
+
+## 🧠 Why It Works
+
+Most prompt tools suggest. This protocol enforces. Alchemist makes it valid. Reaper makes it unbreakable. Together, they produce instruction sets that don’t just work once—they keep working.
+
+---
+
+## 🔁 Final Note
+
+You're not writing prompts. You're farming GPTs for war.
